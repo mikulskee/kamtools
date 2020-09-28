@@ -6,5 +6,25 @@
 
 module.exports = {
   /* Your site config here */
-  plugins: [],
+  plugins: [
+    {
+      resolve: `gatsby-plugin-google-fonts`,
+      options: {
+        fonts: [
+          `montserrat`,
+          // `source sans pro\:300,400,400i,700` // you can also specify font weights and styles
+        ],
+        display: "swap",
+      },
+    },
+    `gatsby-plugin-sharp`,
+    `gatsby-transformer-sharp`,
+    {
+      resolve: `gatsby-source-filesystem`,
+      options: {
+        name: `images`,
+        path: `${__dirname}/src/assets/images`,
+      },
+    },
+  ],
 }
