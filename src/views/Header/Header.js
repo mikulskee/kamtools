@@ -26,7 +26,7 @@ const HeaderWrapper = styled(BackgroundImage)`
   width: 100%;
   height: 60vh;
   display: flex;
-  flex-direction: row;
+  flex-direction: column;
   align-items: center;
   justify-content: center;
   span.cover {
@@ -43,6 +43,9 @@ const H1 = styled.h1`
   width: 50%;
   text-align: center;
   font-weight: 800;
+`
+const Subtitle = styled.p`
+  margin-top: 20px;
 `
 const StyledButtonNext = styled(ButtonNext)`
   position: absolute;
@@ -114,12 +117,18 @@ const Header = () => {
             <HeaderWrapper Tag="div" fluid={data.bg1.childImageSharp.fluid}>
               <span className="cover" />
               <H1>WSZYSTKO CZEGO POTRZEBUJESZ W JEDNYM MIEJSCU</H1>
+              <Subtitle>
+                Doświadczeni ludzie doradzą Ci i pomogą w podjęciu decyzji
+              </Subtitle>
             </HeaderWrapper>
           </Slide>
           <Slide index={1}>
             <HeaderWrapper Tag="div" fluid={data.bg2.childImageSharp.fluid}>
               <span className="cover" />
               <H1>WSZYSTKO CZEGO POTRZEBUJESZ W JEDNYM MIEJSCU</H1>
+              <Subtitle>
+                Doświadczeni ludzie doradzą Ci i pomogą w podjęciu decyzji
+              </Subtitle>
             </HeaderWrapper>
             .
           </Slide>
@@ -127,14 +136,13 @@ const Header = () => {
             <HeaderWrapper Tag="div" fluid={data.bg3.childImageSharp.fluid}>
               <span className="cover" />
               <H1>WSZYSTKO CZEGO POTRZEBUJESZ W JEDNYM MIEJSCU</H1>
+              <Subtitle>
+                Doświadczeni ludzie doradzą Ci i pomogą w podjęciu decyzji
+              </Subtitle>
             </HeaderWrapper>
           </Slide>
         </Slider>
       </CarouselProvider>
-
-      {/* 
-        
-         */}
     </Wrapper>
   )
 }

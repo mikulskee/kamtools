@@ -1,4 +1,5 @@
 import React from "react"
+import Underbar from "../components/Underbar/Underbar"
 import Layout from "../layout & theme/Layout"
 import Header from "../views/Header/Header"
 import Nav from "../views/Nav/Nav"
@@ -8,6 +9,7 @@ const Home = () => {
     <Layout>
       <Nav />
       <Header />
+      <Underbar />
     </Layout>
   )
 }

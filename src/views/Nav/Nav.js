@@ -1,15 +1,7 @@
 import React from "react"
 import styled from "styled-components"
+import Button from "../../components/Button/Button"
 import Logo from "../../components/Logo/Logo"
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
-import { faLongArrowAltRight } from "@fortawesome/free-solid-svg-icons"
-
-const StyledIcon = styled(FontAwesomeIcon)`
-  position: absolute;
-  transform: translateX(0);
-  opacity: 0;
-  transition: all 0.15s linear;
-`
 
 const Wrapper = styled.nav`
   display: flex;
@@ -33,30 +25,6 @@ const Wrapper = styled.nav`
 
         &:hover ::after {
           transform: scaleX(1);
-        }
-
-        &.contact {
-          display: flex;
-          align-items: center;
-          flex-direction: row;
-          background-color: ${({ theme }) => theme.colors.primary};
-          color: white;
-          padding: 20px 40px;
-          border: 1px solid ${({ theme }) => theme.colors.primary};
-          span {
-            transition: transform 0.15s linear;
-            transform: translateX(0);
-          }
-          ::after {
-            display: none;
-          }
-          &:hover span {
-            transform: translateX(-12px);
-          }
-          &:hover svg {
-            transform: translateX(35px);
-            opacity: 1;
-          }
         }
 
         ::after {
@@ -95,10 +63,7 @@ const Nav = () => {
           <a href="#">Opinie</a>
         </li>
         <li>
-          <a className="contact" href="#">
-            <span>Kontakt</span>
-            <StyledIcon icon={faLongArrowAltRight} />
-          </a>
+          <Button component="a">Kontakt</Button>
         </li>
       </ul>
     </Wrapper>
