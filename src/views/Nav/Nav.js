@@ -18,7 +18,6 @@ const Wrapper = styled.nav`
   justify-content: space-between;
   ul {
     list-style: none;
-    padding: 20px;
     display: flex;
     align-items: center;
     li {
