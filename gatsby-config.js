@@ -26,5 +26,6 @@ module.exports = {
         path: `${__dirname}/src/assets/images`,
       },
     },
+    `gatsby-plugin-styled-components`,
   ],
 }
