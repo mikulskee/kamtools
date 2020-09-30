@@ -4,6 +4,7 @@ import Layout from "../layout & theme/Layout"
 import About from "../views/About/About"
 import Header from "../views/Header/Header"
 import Nav from "../views/Nav/Nav"
+import Offer from "../views/Offer/Offer"
 
 const Home = () => {
   return (
@@ -12,6 +13,7 @@ const Home = () => {
       <Header />
       <Underbar />
       <About />
+      <Offer />
     </Layout>
   )
 }
