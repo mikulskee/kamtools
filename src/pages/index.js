@@ -6,6 +6,7 @@ import Header from "../views/Header/Header"
 import Nav from "../views/Nav/Nav"
 import Offer from "../views/Offer/Offer"
 import Reviews from "../views/Reviews/Reviews"
+import Footer from "../views/Footer/Footer"
 
 const Home = () => {
   return (
@@ -16,6 +17,7 @@ const Home = () => {
       <About />
       <Offer />
       <Reviews />
+      <Footer />
     </Layout>
   )
 }
