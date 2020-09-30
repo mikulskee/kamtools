@@ -2,24 +2,32 @@ import React from "react"
 import styled from "styled-components"
 import { useStaticQuery, graphql } from "gatsby"
 import BackgroundImage from "gatsby-background-image"
-import {
-  CarouselProvider,
-  Slider,
-  Slide,
-  ButtonBack,
-  ButtonNext,
-} from "pure-react-carousel"
-import "pure-react-carousel/dist/react-carousel.es.css"
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
-import {
-  faChevronRight,
-  faChevronLeft,
-} from "@fortawesome/free-solid-svg-icons"
+import "react-responsive-carousel/lib/styles/carousel.min.css"
+import { Carousel } from "react-responsive-carousel"
 
 const Wrapper = styled.header`
   height: 60vh;
   overflow: hidden;
   position: relative;
+`
+
+const StyledCarousel = styled(Carousel)`
+  li.slide {
+    background: transparent;
+  }
+
+  .carousel .control-dots .dot {
+    /* background-color: black; */
+    border-radius: 20%;
+    width: 30px;
+    height: 5px;
+    opacity: 0.5;
+  }
+
+  .carousel .control-dots .dot.selected,
+  .carousel .control-dots .dot:hover {
+    opacity: 1;
+  }
 `
 const HeaderWrapper = styled(BackgroundImage)`
   position: relative;
@@ -47,48 +55,27 @@ const H1 = styled.h1`
 const Subtitle = styled.p`
   margin-top: 20px;
 `
-const StyledButtonNext = styled(ButtonNext)`
-  position: absolute;
-  top: 50%;
-  right: 20px;
-  z-index: 9999999;
-  font-size: 40px;
-  background: none;
-  border: none;
-  outline: none;
-`
-const StyledButtonBack = styled(ButtonBack)`
-  position: absolute;
-  top: 50%;
-  left: 20px;
-  z-index: 9999999;
-  font-size: 40px;
-  background: none;
-  border: none;
-  box-shadow: none;
 
-  outline: none;
-`
 const Header = () => {
   const data = useStaticQuery(graphql`
     {
       bg1: file(name: { eq: "headerBg" }) {
         childImageSharp {
-          fluid(quality: 100) {
+          fluid(quality: 100, maxWidth: 1920) {
             ...GatsbyImageSharpFluid_tracedSVG
           }
         }
       }
       bg2: file(name: { eq: "headerBg2" }) {
         childImageSharp {
-          fluid(quality: 100) {
+          fluid(quality: 100, maxWidth: 1920) {
             ...GatsbyImageSharpFluid_tracedSVG
           }
         }
       }
       bg3: file(name: { eq: "headerBg3" }) {
         childImageSharp {
-          fluid(quality: 100) {
+          fluid(quality: 100, maxWidth: 1920) {
             ...GatsbyImageSharpFluid_tracedSVG
           }
         }
@@ -98,51 +85,36 @@ const Header = () => {
 
   return (
     <Wrapper>
-      <CarouselProvider
-        naturalSlideWidth={100}
-        naturalSlideHeight={125}
-        totalSlides={3}
-        isPlaying={true}
-        infinite={true}
-        visibleSlides={1}
+      <StyledCarousel
+        infiniteLoop={true}
+        autoPlay={true}
+        showStatus={false}
+        transitionTime={500}
+        interval={5000}
+        showArrows={true}
       >
-        <StyledButtonBack>
-          <FontAwesomeIcon icon={faChevronLeft} />
-        </StyledButtonBack>
-        <StyledButtonNext>
-          <FontAwesomeIcon icon={faChevronRight} />
-        </StyledButtonNext>
-        <Slider>
-          <Slide index={0}>
-            <HeaderWrapper Tag="div" fluid={data.bg1.childImageSharp.fluid}>
-              <span className="cover" />
-              <H1>WSZYSTKO CZEGO POTRZEBUJESZ W JEDNYM MIEJSCU</H1>
-              <Subtitle>
-                Doświadczeni ludzie doradzą Ci i pomogą w podjęciu decyzji
-              </Subtitle>
-            </HeaderWrapper>
-          </Slide>
-          <Slide index={1}>
-            <HeaderWrapper Tag="div" fluid={data.bg2.childImageSharp.fluid}>
-              <span className="cover" />
-              <H1>WSZYSTKO CZEGO POTRZEBUJESZ W JEDNYM MIEJSCU</H1>
-              <Subtitle>
-                Doświadczeni ludzie doradzą Ci i pomogą w podjęciu decyzji
-              </Subtitle>
-            </HeaderWrapper>
-            .
-          </Slide>
-          <Slide index={2}>
-            <HeaderWrapper Tag="div" fluid={data.bg3.childImageSharp.fluid}>
-              <span className="cover" />
-              <H1>WSZYSTKO CZEGO POTRZEBUJESZ W JEDNYM MIEJSCU</H1>
-              <Subtitle>
-                Doświadczeni ludzie doradzą Ci i pomogą w podjęciu decyzji
-              </Subtitle>
-            </HeaderWrapper>
-          </Slide>
-        </Slider>
-      </CarouselProvider>
+        <HeaderWrapper Tag="div" fluid={data.bg1.childImageSharp.fluid}>
+          <span className="cover" />
+          <H1>WSZYSTKO CZEGO POTRZEBUJESZ W JEDNYM MIEJSCU</H1>
+          <Subtitle>
+            Doświadczeni ludzie doradzą Ci i pomogą w podjęciu decyzji
+          </Subtitle>
+        </HeaderWrapper>
+        <HeaderWrapper Tag="div" fluid={data.bg2.childImageSharp.fluid}>
+          <span className="cover" />
+          <H1>WSZYSTKO CZEGO POTRZEBUJESZ W JEDNYM MIEJSCU</H1>
+          <Subtitle>
+            Doświadczeni ludzie doradzą Ci i pomogą w podjęciu decyzji
+          </Subtitle>
+        </HeaderWrapper>
+        <HeaderWrapper Tag="div" fluid={data.bg3.childImageSharp.fluid}>
+          <span className="cover" />
+          <H1>WSZYSTKO CZEGO POTRZEBUJESZ W JEDNYM MIEJSCU</H1>
+          <Subtitle>
+            Doświadczeni ludzie doradzą Ci i pomogą w podjęciu decyzji
+          </Subtitle>
+        </HeaderWrapper>
+      </StyledCarousel>
     </Wrapper>
   )
 }
