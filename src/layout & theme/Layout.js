@@ -8,7 +8,7 @@ const GlobalStyle = createGlobalStyle`
     padding: 0;
     margin: 0;
     color: white;
-    font-family: ${({ theme }) => theme.fonts.sansSerif} !important;
+    font-family: ${({ theme }) => theme.fonts.sansSerif};
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
     text-rendering: optimizeLegibility;

@@ -11,7 +11,7 @@ const Wrapper = styled.div`
   display: flex;
   margin: -50px auto 0;
   width: 80vw;
-  justify-content: space-between;
+  justify-content: center;
   align-items: center;
 `
 
@@ -23,6 +23,7 @@ const OfferCard = styled.div`
   box-shadow: 0px 0px 6px 2px #445ca46e;
   border: 1px solid #445ca491;
   min-height: 400px;
+  max-width: 380px;
   padding: 40px;
 
   svg {
