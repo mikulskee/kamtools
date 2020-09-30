@@ -79,21 +79,21 @@ const About = () => {
       gallery1: file(name: { eq: "gallery1" }) {
         childImageSharp {
           fluid(quality: 100) {
-            ...GatsbyImageSharpFluid_tracedSVG
+            ...GatsbyImageSharpFluid
           }
         }
       }
       gallery2: file(name: { eq: "gallery2" }) {
         childImageSharp {
           fluid(quality: 100) {
-            ...GatsbyImageSharpFluid_tracedSVG
+            ...GatsbyImageSharpFluid
           }
         }
       }
       gallery3: file(name: { eq: "gallery3" }) {
         childImageSharp {
           fluid(quality: 100) {
-            ...GatsbyImageSharpFluid_tracedSVG
+            ...GatsbyImageSharpFluid
           }
         }
       }

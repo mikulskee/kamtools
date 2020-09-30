@@ -60,7 +60,7 @@ const Offer = () => {
       offerBg: file(name: { eq: "offerBg" }) {
         childImageSharp {
           fluid(quality: 90, maxWidth: 1920) {
-            ...GatsbyImageSharpFluid_tracedSVG
+            ...GatsbyImageSharpFluid
           }
         }
       }

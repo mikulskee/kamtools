@@ -62,21 +62,21 @@ const Header = () => {
       bg1: file(name: { eq: "headerBg" }) {
         childImageSharp {
           fluid(quality: 100, maxWidth: 1920) {
-            ...GatsbyImageSharpFluid_tracedSVG
+            ...GatsbyImageSharpFluid
           }
         }
       }
       bg2: file(name: { eq: "headerBg2" }) {
         childImageSharp {
           fluid(quality: 100, maxWidth: 1920) {
-            ...GatsbyImageSharpFluid_tracedSVG
+            ...GatsbyImageSharpFluid
           }
         }
       }
       bg3: file(name: { eq: "headerBg3" }) {
         childImageSharp {
           fluid(quality: 100, maxWidth: 1920) {
-            ...GatsbyImageSharpFluid_tracedSVG
+            ...GatsbyImageSharpFluid
           }
         }
       }

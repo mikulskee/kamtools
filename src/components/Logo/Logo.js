@@ -14,7 +14,7 @@ const Logo = () => {
       image1: file(name: { eq: "kamtoolsLogo" }) {
         childImageSharp {
           fluid(quality: 90) {
-            ...GatsbyImageSharpFluid_tracedSVG
+            ...GatsbyImageSharpFluid
           }
         }
       }
