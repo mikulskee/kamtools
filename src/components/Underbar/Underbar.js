@@ -12,10 +12,11 @@ const Wrapper = styled.div`
 `
 const H3 = styled.h3`
   font-weight: 600;
+  font-size: 1.7rem;
 `
 const Subtitle = styled.p`
   font-size: 14px;
-  margin-top: 10px;
+  margin-top: 15px;
 `
 
 const Underbar = () => {
