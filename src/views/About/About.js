@@ -14,11 +14,19 @@ const Wrapper = styled.section`
   padding: 100px 10vw;
   display: flex;
   justify-content: space-between;
+  flex-direction: column;
+
+  @media only screen and (min-width: 1024px) {
+    flex-direction: row;
+  }
 `
 
 const GalleryWrapper = styled.div`
   position: relative;
-  width: 35vw;
+  width: 80%;
+  @media only screen and (min-width: 1024px) {
+    width: 35vw;
+  }
 
   div:nth-child(1) {
     width: 70%;
@@ -40,7 +48,11 @@ const GalleryWrapper = styled.div`
 `
 
 const Testimonials = styled.div`
-  width: 30vw;
+  margin: 20px;
+  width: 100%;
+  @media only screen and (min-width: 1024px) {
+    width: 30vw;
+  }
 `
 
 const H3 = styled.h3`
