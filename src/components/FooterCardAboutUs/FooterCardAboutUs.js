@@ -47,7 +47,7 @@ const Description = styled.p`
   display: flex;
   align-items: center;
 
-  div {
+  span {
     width: 30px;
     height: 30px;
     display: flex;
@@ -76,22 +76,22 @@ const FooterCardAboutUs = () => {
           elit.
         </Description>
         <Description>
-          <div>
+          <span>
             <FontAwesomeIcon icon={faMapMarkerAlt} />
-          </div>
+          </span>
           Nowosielce 553, 37-200 Przeworsk
         </Description>
         <Description style={{ margin: "5px 0 10px" }}>
-          <div>
+          <span>
             <FontAwesomeIcon icon={faMobile} />
-          </div>
+          </span>
 
           <a href="tel:+48883953990">883-953-990</a>
         </Description>
         <Description style={{ margin: "0 0 10px" }}>
-          <div>
+          <span>
             <FontAwesomeIcon icon={faEnvelope} />
-          </div>
+          </span>
 
           <a href="mailto:kamil.paluch@kamtools.com.pl">
             kamil.paluch@kamtools.com.pl

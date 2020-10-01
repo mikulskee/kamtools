@@ -100,7 +100,7 @@ const About = () => {
     }
   `)
   return (
-    <Wrapper>
+    <Wrapper className="about">
       <GalleryWrapper>
         <Image fluid={data.gallery1.childImageSharp.fluid} />
         <Image fluid={data.gallery2.childImageSharp.fluid} />

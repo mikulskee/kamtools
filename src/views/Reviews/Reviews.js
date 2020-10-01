@@ -53,7 +53,11 @@ const Reviews = () => {
     }
   `)
   return (
-    <Wrapper Tag="section" fluid={data.pattern.childImageSharp.fluid}>
+    <Wrapper
+      className="reviews"
+      Tag="section"
+      fluid={data.pattern.childImageSharp.fluid}
+    >
       <TitleWrapper>
         <Description>Co o nas mówią</Description>
         <Divider>

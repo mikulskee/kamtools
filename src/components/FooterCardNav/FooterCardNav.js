@@ -42,7 +42,7 @@ const Description = styled.p`
   align-items: center;
   cursor: pointer;
 
-  div {
+  span {
     width: 10px;
     height: 10px;
 
@@ -61,14 +61,14 @@ const FooterCardNav = () => {
           <span />
         </Divider>
         <Description>
-          <div />O nas
+          <span />O nas
         </Description>
         <Description style={{ margin: "10px 0 10px" }}>
-          <div />
+          <span />
           Usługi
         </Description>
         <Description style={{ margin: "10px 0 10px" }}>
-          <div />
+          <span />
           Opinie
         </Description>
       </TitleWrapper>

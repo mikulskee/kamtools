@@ -67,7 +67,7 @@ const Offer = () => {
     }
   `)
   return (
-    <Wrapper>
+    <Wrapper className="offer">
       <StyledBgImg Tag="div" fluid={data.offerBg.childImageSharp.fluid}>
         <TitleWrapper>
           <Description>Co możemy dla Ciebie zrobić</Description>

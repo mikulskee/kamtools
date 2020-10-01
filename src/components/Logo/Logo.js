@@ -6,9 +6,10 @@ import styled from "styled-components"
 const StyledBg = styled(BackgroundImage)`
   height: 60px;
   width: 60px;
+  pointer-events: none;
 `
 
-const Logo = () => {
+const Logo = ({ handleNavigate }) => {
   const data = useStaticQuery(graphql`
     {
       image1: file(name: { eq: "kamtoolsLogo" }) {
@@ -20,9 +21,8 @@ const Logo = () => {
       }
     }
   `)
-  console.log(data)
   return (
-    <a href="#">
+    <a id="home" href="/" onClick={handleNavigate}>
       <StyledBg Tag="div" fluid={data.image1.childImageSharp.fluid} />
     </a>
   )
