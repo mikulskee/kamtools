@@ -13,18 +13,26 @@ const Wrapper = styled.div`
   width: 80vw;
   justify-content: center;
   align-items: center;
+  flex-direction: row;
+  flex-wrap: wrap;
+  @media only screen and (min-width: 1024) {
+    flex-direction: row;
+  }
 `
 
 const OfferCard = styled.div`
   position: relative;
   overflow: hidden;
   background-color: #fff;
-  width: 33%;
+  width: 50%;
   box-shadow: 0px 0px 6px 2px #445ca46e;
   border: 1px solid #445ca491;
-  min-height: 400px;
-  max-width: 380px;
+  min-height: 430px;
   padding: 40px;
+  @media only screen and (min-width: 1024) {
+    width: 33%;
+    max-width: 380px;
+  }
 
   svg {
     font-size: 40px;
