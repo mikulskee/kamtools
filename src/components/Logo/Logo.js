@@ -14,7 +14,7 @@ const Logo = ({ handleNavigate }) => {
     {
       image1: file(name: { eq: "kamtoolsLogo" }) {
         childImageSharp {
-          fluid(quality: 90) {
+          fluid(quality: 90, maxWidth: 1920) {
             ...GatsbyImageSharpFluid
           }
         }

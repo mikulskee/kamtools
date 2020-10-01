@@ -4,6 +4,7 @@ import Button from "../../components/Button/Button"
 import Logo from "../../components/Logo/Logo"
 import smoothscroll from "smoothscroll-polyfill"
 import Burger from "../../components/Burger/Burger"
+import ContactModal from "../../components/ContactModal/ContactModal"
 
 const Wrapper = styled.nav`
   position: sticky;
@@ -14,13 +15,9 @@ const Wrapper = styled.nav`
   justify-content: space-between;
   z-index: 999999;
   background-color: white;
+  box-shadow: 0px 0px 20px 2px #000;
 
   &.mobile {
-    /* padding-bottom: ${({ isOpenMenu }) =>
-      isOpenMenu ? "100vh" : ""};
-    margin-bottom: ${({ isOpenMenu }) =>
-      isOpenMenu ? "-100vh" : ""}; */
-
     ul {
       position: absolute;
       top: 0;
@@ -29,16 +26,13 @@ const Wrapper = styled.nav`
       background-color: white;
       z-index: 9999;
       width: 100%;
-
       padding: 30px 0;
       transition: ${({ isOpenMenu }) =>
         isOpenMenu !== undefined && "transform 0.35s linear"};
 
       transform: ${({ isOpenMenu }) =>
         isOpenMenu ? "translateY(0)" : "translateY(-120%)"};
-
-      /* height: ${({ isOpenMenu }) =>
-        isOpenMenu === "open" ? "70vh" : "0"}; */
+      box-shadow: 0px 0px 20px 2px #000;
     }
   }
 
@@ -81,6 +75,7 @@ const Nav = () => {
   const navRef = useRef()
   const [isMobile, setIsMobile] = useState("")
   const [isOpenMenu, setIsOpenMenu] = useState()
+  const [isContactModalOpen, setIsContactModalOpen] = useState(false)
   useEffect(() => {
     if (window.innerWidth < 1024) {
       setIsMobile("mobile")
@@ -194,9 +189,20 @@ const Nav = () => {
           </a>
         </li>
         <li>
-          <Button component="a">Kontakt</Button>
+          <Button
+            component="button"
+            setIsContactModalOpen={setIsContactModalOpen}
+            setIsOpenMenu={setIsOpenMenu}
+          >
+            Kontakt
+          </Button>
         </li>
       </ul>
+
+      <ContactModal
+        setIsContactModalOpen={setIsContactModalOpen}
+        isContactModalOpen={isContactModalOpen}
+      />
     </Wrapper>
   )
 }

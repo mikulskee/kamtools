@@ -28,6 +28,7 @@ const BTN = styled.button`
   outline: none;
 
   span {
+    pointer-events: none;
     transition: transform 0.15s linear;
     transform: translateX(0);
     font-weight: 600;
@@ -93,7 +94,14 @@ const A = styled.a`
 const Button = props => {
   if (props.component === "button" || props.component === undefined) {
     return (
-      <BTN className={props.className} color={props.color}>
+      <BTN
+        className={props.className}
+        color={props.color}
+        onClick={() => {
+          props.setIsContactModalOpen(true)
+          props.setIsOpenMenu(false)
+        }}
+      >
         <span>{props.children}</span>
         <StyledIcon icon={faLongArrowAltRight} />
       </BTN>

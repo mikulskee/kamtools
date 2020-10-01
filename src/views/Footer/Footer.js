@@ -18,7 +18,7 @@ const CardWrapper = styled.div`
   width: 100%;
   margin-bottom: 80px;
   flex-wrap: wrap;
-  align-items: center;
+  align-items: flex-start;
 `
 
 const Footer = () => {
