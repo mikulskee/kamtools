@@ -24,7 +24,7 @@ const OfferCard = styled.div`
   position: relative;
   overflow: hidden;
   background-color: #fff;
-  width: 50%;
+  /* width: 50%; */
   box-shadow: 0px 0px 6px 2px #445ca46e;
   border: 1px solid #445ca491;
   min-height: 430px;

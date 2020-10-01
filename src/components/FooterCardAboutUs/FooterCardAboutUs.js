@@ -7,7 +7,9 @@ import {
   faEnvelope,
 } from "@fortawesome/free-solid-svg-icons"
 
-const FooterCard = styled.div``
+const FooterCard = styled.div`
+  margin: 20px 10px;
+`
 
 const TitleWrapper = styled.div`
   display: flex;

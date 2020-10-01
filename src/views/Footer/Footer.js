@@ -6,14 +6,19 @@ import FooterCardOpeningHours from "../../components/FooterCardOpeningHours/Foot
 
 const Wrapper = styled.footer`
   background-color: #171717;
-  padding: 60px 20vw 0;
+  padding: 60px 20px 0;
+  @media only screen and (min-width: 1024px) {
+    padding: 60px 20vw 0;
+  }
 `
 
 const CardWrapper = styled.div`
   display: flex;
-  justify-content: space-between;
+  justify-content: space-around;
   width: 100%;
   margin-bottom: 80px;
+  flex-wrap: wrap;
+  align-items: center;
 `
 
 const Footer = () => {

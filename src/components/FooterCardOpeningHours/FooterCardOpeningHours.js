@@ -1,7 +1,11 @@
 import React from "react"
 import styled from "styled-components"
 
-const FooterCard = styled.div``
+const FooterCard = styled.div`
+  display: flex;
+  justify-content: center;
+  margin: 20px 10px;
+`
 
 const TitleWrapper = styled.div`
   display: flex;

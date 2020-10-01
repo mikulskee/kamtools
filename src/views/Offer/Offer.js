@@ -38,13 +38,16 @@ const H3 = styled.h3`
 const Divider = styled.div`
   display: flex;
   align-items: center;
+  justify-content: center;
   margin: 10px 0;
+  width: 100%;
 
   span:nth-child(1),
   span:nth-child(3) {
-    width: 200px;
+    width: 20%;
     height: 2px;
     background-color: ${({ theme }) => theme.colors.primary};
+    max-width: 200px;
   }
 
   span:nth-child(2) {
