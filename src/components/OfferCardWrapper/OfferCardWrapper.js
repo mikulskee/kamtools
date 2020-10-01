@@ -15,7 +15,7 @@ const Wrapper = styled.div`
   align-items: center;
   flex-direction: row;
   flex-wrap: wrap;
-  @media only screen and (min-width: 1024) {
+  @media only screen and (min-width: 1024px) {
     flex-direction: row;
   }
 `
@@ -29,7 +29,7 @@ const OfferCard = styled.div`
   border: 1px solid #445ca491;
   min-height: 430px;
   padding: 40px;
-  @media only screen and (min-width: 1024) {
+  @media only screen and (min-width: 1024px) {
     width: 33%;
     max-width: 380px;
   }

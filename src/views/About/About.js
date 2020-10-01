@@ -63,6 +63,11 @@ const Description = styled.p`
   color: black;
   margin-top: 40px;
   line-height: 1.6;
+  font-size: 0.6 rem;
+
+  @media only screen and (min-width: 570px) {
+    font-size: 1.2rem;
+  }
   & * {
     color: black;
   }
@@ -72,16 +77,23 @@ const IconsWrapper = styled.div`
   display: flex;
   margin-top: 30px;
   align-items: center;
+  flex-wrap: wrap;
+  justify-content: center;
 
-  svg {
-    margin: 0 20px;
-  }
-  svg:nth-child(1) {
-    margin-left: 0;
-  }
-  & * {
-    font-size: 30px;
-    color: black;
+  div {
+    display: flex;
+    align-items: center;
+    margin: 5px;
+    svg {
+      margin: 10px 20px;
+    }
+    svg:nth-child(1) {
+      margin-left: 0;
+    }
+    & * {
+      font-size: 30px;
+      color: black;
+    }
   }
 `
 
@@ -130,26 +142,36 @@ const About = () => {
           faucibus orci luctus et ultrices posuere cubilia curae.
         </Description>
         <IconsWrapper>
-          <FontAwesomeIcon icon={faWrench} />
-          <p style={{ fontSize: "12px", marginLeft: "-10px" }}>
-            Lorem <br />
-            ipsum
-          </p>
-          <FontAwesomeIcon icon={faHammer} />
-          <p style={{ fontSize: "12px", marginLeft: "-10px" }}>
-            Lorem <br />
-            ipsum
-          </p>
-          <FontAwesomeIcon icon={faScrewdriver} />
-          <p style={{ fontSize: "12px", marginLeft: "-10px" }}>
-            Lorem <br />
-            ipsum
-          </p>
-          <FontAwesomeIcon icon={faToolbox} />
-          <p style={{ fontSize: "12px", marginLeft: "-10px" }}>
-            Lorem <br />
-            ipsum
-          </p>
+          <div>
+            <FontAwesomeIcon icon={faWrench} />
+            <p style={{ fontSize: "12px", marginLeft: "-10px" }}>
+              Lorem <br />
+              ipsum
+            </p>
+          </div>
+
+          <div>
+            <FontAwesomeIcon icon={faHammer} />
+            <p style={{ fontSize: "12px", marginLeft: "-10px" }}>
+              Lorem <br />
+              ipsum
+            </p>
+          </div>
+
+          <div>
+            <FontAwesomeIcon icon={faScrewdriver} />
+            <p style={{ fontSize: "12px", marginLeft: "-10px" }}>
+              Lorem <br />
+              ipsum
+            </p>
+          </div>
+          <div>
+            <FontAwesomeIcon icon={faToolbox} />
+            <p style={{ fontSize: "12px", marginLeft: "-10px" }}>
+              Lorem <br />
+              ipsum
+            </p>
+          </div>
         </IconsWrapper>
       </Testimonials>
     </Wrapper>

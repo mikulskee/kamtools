@@ -34,9 +34,14 @@ const Opinion = styled.p`
 
 const Quote = styled.span`
   color: ${({ theme }) => theme.colors.primary};
-  font-size: 10rem;
+  font-size: 6rem;
   font-family: "Sorts Mill Goudy", serif;
-  line-height: 0.8;
+  line-height: 1.2;
+
+  @media only screen and (min-width: 1024px) {
+    font-size: 10rem;
+    line-height: 0.8;
+  }
 `
 const ClientReviewCard = () => {
   return (

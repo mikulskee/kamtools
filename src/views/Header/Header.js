@@ -51,9 +51,19 @@ const H1 = styled.h1`
   width: 50%;
   text-align: center;
   font-weight: 800;
+  font-size: 1.6rem;
+
+  @media only screen and (min-width: 570px) {
+    font-size: 2rem;
+  }
 `
 const Subtitle = styled.p`
   margin-top: 20px;
+  font-size: 0.6 rem;
+  padding: 0 10px;
+  @media only screen and (min-width: 570px) {
+    font-size: 1.2rem;
+  }
 `
 
 const Header = () => {

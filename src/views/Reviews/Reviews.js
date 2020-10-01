@@ -5,7 +5,10 @@ import styled from "styled-components"
 import ClientsReviews from "../../components/ClientsReviews/ClientsReviews"
 
 const Wrapper = styled(BackgroundImage)`
-  padding: 80px;
+  padding: 80px 20px;
+  @media only screen and (min-width: 1024px) {
+    padding: 80px;
+  }
 `
 
 const TitleWrapper = styled.div`
@@ -16,8 +19,14 @@ const TitleWrapper = styled.div`
 `
 const Description = styled.p``
 const H3 = styled.h3`
-  line-height: 1;
-  font-size: 2rem;
+  text-align: center;
+  line-height: 1.2;
+  font-size: 1.6rem;
+
+  @media only screen and (min-width: 570px) {
+    font-size: 2rem;
+    line-height: 1;
+  }
 `
 
 const Divider = styled.div`
@@ -31,14 +40,14 @@ const Divider = styled.div`
   span:nth-child(3) {
     width: 20%;
     height: 2px;
-    background-color: ${({ theme }) => theme.colors.primary};
+    background-color: white;
     max-width: 200px;
   }
 
   span:nth-child(2) {
     height: 10px;
     width: 10px;
-    background-color: ${({ theme }) => theme.colors.primary};
+    background-color: white;
     margin: 0 20px;
   }
 `
