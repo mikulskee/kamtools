@@ -32,7 +32,7 @@ const Opinion = styled.p`
   padding: 40px 20px;
 `
 
-const Quote = styled.div`
+const Quote = styled.span`
   color: ${({ theme }) => theme.colors.primary};
   font-size: 10rem;
   font-family: "Sorts Mill Goudy", serif;
@@ -44,7 +44,6 @@ const ClientReviewCard = () => {
       <Name>
         Jan Kowalski <Quote>"</Quote>
       </Name>
-
       <Divider />
       <Opinion>
         Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean nec

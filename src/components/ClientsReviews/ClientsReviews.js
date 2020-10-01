@@ -32,6 +32,7 @@ const ClientsReviews = () => {
       transitionTime={500}
       interval={5000}
       showArrows={false}
+      showThumbs={false}
     >
       <ClientReviewCard />
       <ClientReviewCard />

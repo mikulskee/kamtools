@@ -92,6 +92,7 @@ const Header = () => {
         transitionTime={500}
         interval={5000}
         showArrows={true}
+        showThumbs={false}
       >
         <HeaderWrapper Tag="div" fluid={data.bg1.childImageSharp.fluid}>
           <span className="cover" />
